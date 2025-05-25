@@ -8,17 +8,31 @@
 
 ## Overview
 This repository contains two complementary MATLAB modules for implementing CNMs:
-1. Validations on Benchmark Models
-2. Validations on Real-world epileptic iEEG Datasets
+1. 🧬 ​​Validations on Benchmark Models;
+2. 🧠 Validations on Real-world epileptic iEEG Datasets.
+
+The code requires MATLAB R2023a (or other compatible version) with the Parallel Computing Toolbox
 
 ## 1. Validations on Benchmark Models
+### Description
 (The code will update asap)
 
-## 2. Validations on Real-world epileptic iEEG Datasets
+## 2. Validations on Real-world Epileptic iEEG Datasets
+### Description
+The MATLAB script 📊`iEEG_data_validation.m`, contained within the 📁`Validations on iEEG Datasets` directory, is responsible for generating all subplot visualizations of the iEEG results that appear in the 📰`Supporting Information` of our publication.
 
+### How to Run
+1. Read the 📄`iEEG Dataset Download Instuction.pdf` to download the necessary datasets;
+2. Run the 📊`iEEG_data_validation.m` directly to generate the MATLAB visualization plots.
+
+### Customization​
+To analyze different iEEG datasets, modify the following parameters. Please note that the referenced datasets must be pre-downloaded.
+```bibtex
+ID = 1; Sz = 4;         % Select your interested dataset
+```
 
 ## Citation
-Please cite:
+The BibTEX format is as given:
 ```bibtex
 @article{bian2024cnms,
   title={Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition},
@@ -32,4 +46,4 @@ Please cite:
 Open-source under MIT Licence.
 
 ## Additional Acknowledgments
-We thank Liuqian Guo from Dalian University of Technology for drawing the elements in Figure 2 (d) and (e) : )
+We thank **Liuqian Guo** from *Dalian University of Technology* for her contribution to drawing the elements for Figure 2 (d) and (e) : )
