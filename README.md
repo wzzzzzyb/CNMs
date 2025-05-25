@@ -42,8 +42,8 @@ The BibTEX format is as given:
 }
 ```
 
-## Licence
-Open-source under MIT Licence.
+## License
+Open-source under MIT License.
 
 ## Additional Acknowledgments
 We thank **Liuqian Guo** from *Dalian University of Technology* for her contribution to drawing the elements for Figure 2 (d) and (e) : )
