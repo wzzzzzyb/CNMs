@@ -15,14 +15,17 @@ The code requires MATLAB R2023a (or other compatible version) with the Parallel 
 
 ## 1. Validations on Benchmark Models
 ### Description
-(The code will update asap)
+The MATLAB script 📊`Five_genetic_validation.m`, contained within the 📁`Validations on Benchmark models` directory, generates the results for five-genetic network data by Langevin simulation and gives the CNMs results.
+
+### How to Run
+Run directly.
 
 ## 2. Validations on Real-world Epileptic iEEG Datasets
 ### Description
 The MATLAB script 📊`iEEG_data_validation.m`, contained within the 📁`Validations on iEEG Datasets` directory, is responsible for generating all subplot visualizations of the iEEG results that appear in the 📰`Supporting Information` of our publication.
 
 ### How to Run
-1. Read the 📄`iEEG Dataset Download Instuction.pdf` to download the necessary datasets;
+1. Read the 📄`iEEG Dataset Download Instruction.pdf` to download the necessary datasets;
 2. Run the 📊`iEEG_data_validation.m` directly to generate the MATLAB visualization plots.
 
 ### Customization​
