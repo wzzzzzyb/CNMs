@@ -1,7 +1,7 @@
 # Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition
-*Early-warning signal, Identification of clinical disease, Causal network marker*
+*Early-warnin signal, Identification of clinical disease, Causal network marker*
 
-[![DOI](https://img.shields.io/badge/DOI-arXiv.2412.16235-yellow)](https://doi.org/10.48550/arXiv.2412.16235)
+[![DOI](https://img.shields.io/badge/DOI-advs.202415732-yellow)](https://doi.org/10.1002/advs.202415732)c
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2023a-%23FF9500?logo=mathworks&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Last Commit](https://img.shields.io/github/last-commit/wzzzzzyb/CNMs?color=blue)
@@ -48,15 +48,17 @@ ID = 1; Sz = 4;         % Select your interested dataset
 ## Citation
 The APA format:
 ``` markdown
-Bian, S., Wang, Z., Leng, S., Lin, W., & Shi, J. (2024). Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition. arXiv preprint arXiv:2412.16235.
+​​Bian, S., Wang, Z., Leng, S., Lin, W., & Shi, J.​​ (2025). Utilizing causal network markers to identify tipping points ahead of critical transition. Advanced Science, Article e15732. https://doi.org/10.1002/advs.202415732
 ```
 The BibTEX format:
 ```bibtex
-@article{bian2024cnms,
-  title={Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition},
-  author={Bian, Shirui and Wang, Zezhou and Leng, Siyang and Lin, Wei and Shi, Jifan},
-  journal={arXiv preprint arXiv:2412.16235},
-  year={2024}
+@article{Bian2025,
+  author = {Bian, Shirui and Wang, Zezhou and Leng, Siyang and Lin, Wei and Shi, Jifan},
+  title = {Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition},
+  journal = {Advanced Science},
+  pages = {e15732},
+  year = {2025},
+  doi = {https://doi.org/10.1002/advs.202415732},
 }
 ```
 
