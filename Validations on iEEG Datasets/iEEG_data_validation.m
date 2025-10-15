@@ -27,7 +27,15 @@
 %   2. Modify ID and Sz to analyze different patient/seizure cases
 %   3. Run this script directly (click "Run" or type script name in the command window)
 % 
-% Project: https://github.com/wzzzzzyb/CNMs | Last Updated: 2025-05-29
+% Project: https://github.com/wzzzzzyb/CNMs | Last Updated: 2025-10-26
+%
+% Update Log:
+%   - 2025-10-26: The previous version forgot to use sqrt function when
+%   calculating SD_d, and PCC_o normalization was mistakenly written as
+%   PCC_d. This may affect the value of DNB but will not affect the main
+%   conclusions of the paper.
+%
+%   - 2025-05-29: Initial version.
 % =========================================================
 %% Step 0: Download the iEEG Dataset
 % Read the "iEEG Dataset Download Instruction.pdf" to prepare for the
@@ -47,6 +55,7 @@ ID = 1; Sz = 4;         % Select your interested dataset
 
 load([Path '\iEEG dataset\ID' num2str(ID) '\Sz' num2str(Sz)]);  % load the mat
 disp(['Processing: ID' num2str(ID) '_Sz'  num2str(Sz) '...']);
+
 %% Step 2: Data Preprocessing
 f = 512;            % Write frequency (see source website for details)
 [N M] = size(EEG);  % Data row and column size, N represents data length, and M represents the electrode channels
@@ -118,11 +127,12 @@ for i = 1:length(dominant_group)
         k = k + 1;
     end
 end
+
 %% Step 4: Dynamical Network Marker (DNB)
 % DNB(Net) := SD_d .* PCC_d ./ PCC_o
 SD_d = zeros(T-1,1); % Calculate the SD_d
 for i = 1:length(dominant_group)
-    SD_d = SD_d + reshape(covariance_tensor(dominant_group(i), dominant_group(i),:),T-1,1);
+    SD_d = SD_d + sqrt(reshape(covariance_tensor(dominant_group(i), dominant_group(i),:),T-1,1));
 end
 SD_d = SD_d / length(dominant_group);
 
@@ -137,7 +147,8 @@ PCC_o = zeros(T-1,1); % Calculate the PCC_o
 for i = 1:s2
     PCC_o = PCC_o + abs(reshape(covariance_tensor(DG_NDG_pos(i,1), DG_NDG_pos(i,2),:),T-1,1));
 end
-PCC_d = PCC_d / s2;
+PCC_o= PCC_o / s2;
+
 DNB = SD_d .* PCC_d ./ PCC_o;
 
 %% Step 5: Causal Network Marker - Granger Causality and Transfer Entropy (CNM-GC and CNM-TE)
@@ -171,6 +182,7 @@ CNM_GC = 1 ./ mean(GC(:,:), 1)';
 CNM_TE = 1 ./ mean(TE(:,:), 1)';
 
 delete(gcp('nocreate')); toc;    % Close the Parallel Computing Toolbox
+
 %% Step 6: Visualization
 % Output subplot in Supplemental Material, including CNM-GC, CNM-TE, DNB,
 % node variance, DG node variance, and NDG node variance.
