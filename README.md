@@ -65,6 +65,11 @@ The BibTEX format:
 ## License
 Open-source under MIT License.
 
+## Repository Log
+**2025-05:** Initial version.
+
+**2025-10:** Fixed several bugs in DNB calculations in IEEG validation file.
+
 ## Additional Acknowledgments
 We thank **Liuqian Guo** from *Dalian University of Technology* for her contribution to drawing the elements for Figure 2 (d) and (e) : )
 <div align="center">
