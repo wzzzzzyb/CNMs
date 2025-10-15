@@ -68,6 +68,8 @@ Open-source under MIT License.
 ## Repository Log
 **2025-05:** Initial version.
 
+**2025-09:** Article published. Update DOI and citation formats.
+
 **2025-10:** Fixed several bugs in DNB calculations in IEEG validation file.
 
 ## Additional Acknowledgments
