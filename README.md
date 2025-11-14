@@ -48,7 +48,7 @@ ID = 1; Sz = 4;         % Select your interested dataset
 ## Citation
 The APA format:
 ``` markdown
-​​Bian, S., Wang, Z., Leng, S., Lin, W., & Shi, J.​​ (2025). Utilizing causal network markers to identify tipping points ahead of critical transition. Advanced Science, Article e15732. https://doi.org/10.1002/advs.202415732
+Bian, S., Wang, Z., Leng, S., Lin, W., & Shi, J. (2025). Utilizing causal network markers to identify tipping points ahead of critical transition. Advanced Science, 12(42), Article e15732. https://doi.org/10.1002/advs.202415732
 ```
 The BibTEX format:
 ```bibtex
@@ -56,6 +56,8 @@ The BibTEX format:
   author = {Bian, Shirui and Wang, Zezhou and Leng, Siyang and Lin, Wei and Shi, Jifan},
   title = {Utilizing Causal Network Markers to Identify Tipping Points ahead of Critical Transition},
   journal = {Advanced Science},
+  volume = {12},
+  number = {42},
   pages = {e15732},
   year = {2025},
   doi = {https://doi.org/10.1002/advs.202415732},
@@ -66,11 +68,13 @@ The BibTEX format:
 Open-source under MIT License.
 
 ## Repository Log
-**2025-05:** Initial version.
+**2025-11:** Article published in a issue. Update volume and number.
+
+**2025-10:** Fixed several bugs in DNB calculations in IEEG validation file.
 
 **2025-09:** Article published. Update DOI and citation formats.
 
-**2025-10:** Fixed several bugs in DNB calculations in IEEG validation file.
+**2025-05:** Initial version.
 
 ## Additional Acknowledgments
 We thank **Liuqian Guo** from *Dalian University of Technology* for her contribution to drawing the elements for Figure 2 (d) and (e) : )
