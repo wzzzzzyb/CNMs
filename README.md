@@ -70,7 +70,7 @@ Open-source under MIT License.
 ## Repository Log
 **2025-11:** Article published in a issue. Update volume and number.
 
-**2025-10:** Fixed several bugs in DNB calculations in IEEG validation file.
+**2025-10:** Fixed several bugs in DNB calculations in iEEG validation file.
 
 **2025-09:** Article published. Update DOI and citation formats.
 
